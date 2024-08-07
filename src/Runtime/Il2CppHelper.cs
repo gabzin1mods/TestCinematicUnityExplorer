@@ -24,6 +24,7 @@ namespace UnityExplorer.Runtime
         private void Application_logMessageReceived(string condition, string stackTrace, LogType type)
         {
             ExplorerCore.LogUnity(condition, type);
+            ExplorerCore.Log($"Test Lol {stackTrace}");
         }
 
         public override string[] DefaultReflectionBlacklist => defaultIl2CppBlacklist.ToArray();
